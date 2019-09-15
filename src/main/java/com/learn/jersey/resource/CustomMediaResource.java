@@ -106,8 +106,9 @@ public class CustomMediaResource {
 
 	@GET
     @Path("/context")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     public String getContexts(@Context UriInfo uriInfo, @Context Request request){
+		System.out.println(uriInfo.getAbsolutePath() + " === "+ request.getMethod());
         return uriInfo.getAbsolutePath() + " === "+ request.getMethod();
     }
 }
