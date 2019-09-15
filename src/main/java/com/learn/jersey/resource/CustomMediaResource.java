@@ -103,4 +103,11 @@ public class CustomMediaResource {
 		return Response.ok(courses).tag(etag).cacheControl(cacheControl).build();
 
 	}
+
+	@GET
+    @Path("/context")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getContexts(@Context UriInfo uriInfo, @Context Request request){
+        return uriInfo.getAbsolutePath() + " === "+ request.getMethod();
+    }
 }
