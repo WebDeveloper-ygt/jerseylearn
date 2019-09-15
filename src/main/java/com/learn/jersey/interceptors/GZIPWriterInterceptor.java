@@ -2,6 +2,7 @@ package com.learn.jersey.interceptors;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.ext.Provider;
 import javax.ws.rs.ext.WriterInterceptor;
 import javax.ws.rs.ext.WriterInterceptorContext;
